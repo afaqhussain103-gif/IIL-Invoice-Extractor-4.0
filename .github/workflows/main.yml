@@ -11,7 +11,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: Setup Python
       uses: actions/setup-python@v4
@@ -28,7 +28,7 @@ jobs:
         pyinstaller --onefile --windowed --name "IIL_Invoice_Extractor" invoice_extractor.py
     
     - name: Upload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: IIL-Invoice-Extractor
         path: dist/IIL_Invoice_Extractor.exe
